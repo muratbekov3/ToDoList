@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 mongoose
-  .connect("mongodb+srv://akylbek:101191@cluster0.fbqxbd9.mongodb.net/")
+  .connect(MONGODB_API)
   .then(() => console.log(`Connected to MongoDB`))
   .catch((err) => {
     console.error(`${err}`);
